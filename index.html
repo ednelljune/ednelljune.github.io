@@ -21,6 +21,13 @@
       }
       .nav-blur { backdrop-filter: saturate(120%) blur(8px); }
       .tab-active { border-bottom-width:2px; border-color: rgb(34 197 94); color: rgb(34 197 94); }
+
+      /* ---------- Responsive project image frames ---------- */
+      .media-frame { position: relative; width: 100%; overflow: hidden; }
+      .media-frame.landscape { aspect-ratio: 16 / 9; }
+      .media-frame.portrait  { aspect-ratio: 3 / 4; }
+      .media-frame.square    { aspect-ratio: 1 / 1; }
+      .media-frame > img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
     </style>
   </head>
   <body class="bg-[var(--bg)] text-white">
@@ -52,7 +59,7 @@
         <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">Ednell June Songahid</h1>
         <p class="mt-2 text-lg text-green-400 font-semibold">Aspiring Penetration Tester</p>
         <p class="mt-6 text-base leading-7 text-zinc-400">
-          Dedicated cybersecurity enthusiast with hands‑on experience in penetration testing labs,
+          Dedicated cybersecurity enthusiast with hands-on experience in penetration testing labs,
           network enumeration, and web application security. Passionate about uncovering
           vulnerabilities, continuous learning, and sharing practical insights through writeups
           and projects.
@@ -105,7 +112,7 @@
 
       <!-- Certificates -->
       <div id="certificates" class="tab-content">
-       <div class="overflow-x-auto mt-6">
+        <div class="overflow-x-auto mt-6">
           <table class="min-w-full text-sm text-left border border-white/10 rounded-lg overflow-hidden">
             <thead class="bg-white/5 text-xs uppercase text-zinc-400">
               <tr>
@@ -191,8 +198,8 @@
         <!-- Project Card 1 -->
         <article class="grid gap-6 lg:grid-cols-12 bg-white/5 border border-white/10 rounded-2xl p-6">
           <figure class="lg:col-span-5">
-            <div class="aspect-video w-full overflow-hidden rounded-xl ring-1 ring-white/10 bg-zinc-900">
-              <img src="fin-tracker.png" alt="Financial Tracker screenshots" class="h-full w-full object-cover" />
+            <div class="media-frame landscape rounded-xl ring-1 ring-white/10 bg-zinc-900">
+              <img src="fin-tracker.png" alt="Financial Tracker screenshots" />
             </div>
             <figcaption class="sr-only">Financial Tracker Web Application UI</figcaption>
           </figure>
@@ -203,7 +210,7 @@
               A friendly budgeting tool that tracks income and expenses with clear summaries and authentication.
             </p>
             <ul class="list-disc list-inside text-zinc-200 space-y-1 mb-4">
-              <li>Secure sign‑in with Firebase Auth (Google)</li>
+              <li>Secure sign-in with Firebase Auth (Google)</li>
               <li><b>Tech Stack:</b> Vite.js, Tailwind CSS, Firebase, HTML</li>
               <li><b>Screenshots:</b> <a href="https://shorturl.at/6HOcZ" class="text-green-400 underline">View album</a></li>
             </ul>
@@ -213,8 +220,8 @@
         <!-- Project Card 2 -->
         <article class="grid gap-6 lg:grid-cols-12 bg-white/5 border border-white/10 rounded-2xl p-6">
           <figure class="lg:col-span-5 order-last lg:order-first">
-            <div class="aspect-video w-full overflow-hidden rounded-xl ring-1 ring-white/10 bg-zinc-900">
-              <img src="ce.png" alt="Connect Eurobodalla dashboard screenshots" class="h-full w-full object-cover" />
+            <div class="media-frame landscape rounded-xl ring-1 ring-white/10 bg-zinc-900">
+              <img src="ce.png" alt="Connect Eurobodalla dashboard screenshots" />
             </div>
             <figcaption class="sr-only">Connect Eurobodalla dashboard</figcaption>
           </figure>
@@ -224,10 +231,10 @@
             </h3>
             <p class="text-sm text-zinc-400 mb-3">Organization: Capstone Project</p>
             <p class="text-zinc-200 mb-4">
-              Responsive admin dashboard with secure authentication and role‑based access for a local council initiative.
+              Responsive admin dashboard with secure authentication and role-based access for a local council initiative.
             </p>
             <ul class="list-disc list-inside text-zinc-200 space-y-1 mb-4">
-              <li>Role‑based access and verification flows</li>
+              <li>Role-based access and verification flows</li>
               <li><b>Tech Stack:</b> React, Tailwind CSS, Firebase, HTML</li>
               <li><b>Website:</b> <a href="https://ce.org.au/" class="text-green-400 underline">Click here!</a></li>
             </ul>
@@ -237,10 +244,10 @@
         <!-- Project Card 3 -->
         <article class="grid gap-6 lg:grid-cols-12 bg-white/5 border border-white/10 rounded-2xl p-6">
           <figure class="lg:col-span-5 order-last lg:order-first">
-            <div class="aspect-video w-full overflow-hidden rounded-xl ring-1 ring-white/10 bg-zinc-900">
-              <img src="budget-tracker.png" alt="Connect Eurobodalla dashboard screenshots" class="h-full w-full object-cover" />
+            <div class="media-frame landscape rounded-xl ring-1 ring-white/10 bg-zinc-900">
+              <img src="budget-tracker.png" alt="Budget Tracker Mobile App screenshots" />
             </div>
-            <figcaption class="sr-only">Bugdet Tracker Mobile App with Google Wallet Integration</figcaption>
+            <figcaption class="sr-only">Budget Tracker Mobile App with Google Wallet Integration</figcaption>
           </figure>
           <div class="lg:col-span-7">
             <h3 class="text-2xl font-semibold text-white">
@@ -295,7 +302,7 @@
         if (firstBtn) showTab('certificates', firstBtn);
       });
 
-      // Make the hero "View Projects" button open the Projects tab and scroll to it
+      // "View Projects" button: open the Projects tab and scroll to it
       const viewProjectsBtn = document.getElementById('view-projects-btn');
       if (viewProjectsBtn) {
         viewProjectsBtn.addEventListener('click', (e) => {
@@ -305,6 +312,23 @@
           document.getElementById('projects').scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
       }
+
+      // --------- Auto-orient project image frames (portrait / landscape / square) ---------
+      function setFrameOrientation(frame) {
+        const img = frame.querySelector('img');
+        const apply = () => {
+          const w = img.naturalWidth, h = img.naturalHeight;
+          if (!w || !h) return;
+          frame.classList.remove('landscape','portrait','square');
+          const ratio = w / h;
+          if (Math.abs(ratio - 1) < 0.06)      frame.classList.add('square');
+          else if (ratio > 1)                  frame.classList.add('landscape');
+          else                                  frame.classList.add('portrait');
+        };
+        if (img.complete) apply(); else img.addEventListener('load', apply, { once: true });
+      }
+
+      document.querySelectorAll('.media-frame').forEach(setFrameOrientation);
     </script>
   </body>
 </html>
