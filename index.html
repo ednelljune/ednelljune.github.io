@@ -1,20 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ednell June Songahid | Cybersecurity Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <style>
-      :root { --bg: #0b0b0b; --card: #101010; --muted: #b3b3b3; }
-      html { font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Cantarell, Noto Sans, 'Helvetica Neue', Arial, 'Apple Color Emoji', 'Segoe UI Emoji'; }
+      :root { --bg: #0b0b0b; --card: #101010; }
+      html { font-family: Inter, ui-sans-serif, system-ui; }
       .glow { box-shadow: 0 0 0 0 rgba(34,197,94,.7); animation: pulseGlow 2.4s ease-in-out infinite; }
-      @keyframes pulseGlow { 0%,100%{ box-shadow:0 0 0 0 rgba(34,197,94,.55),0 0 35px 2px rgba(34,197,94,.35)} 50%{ box-shadow:0 0 0 12px rgba(34,197,94,.08),0 0 60px 8px rgba(34,197,94,.2)} }
+      @keyframes pulseGlow {
+        0%,100%{ box-shadow:0 0 0 0 rgba(34,197,94,.55),0 0 35px 2px rgba(34,197,94,.35) }
+        50%{ box-shadow:0 0 0 12px rgba(34,197,94,.08),0 0 60px 8px rgba(34,197,94,.2) }
+      }
       .nav-blur { backdrop-filter: saturate(120%) blur(8px); }
-      .tab-active { border-bottom-width: 2px; border-color: rgb(34 197 94); color: rgb(34 197 94); }
+      .tab-active { border-bottom-width:2px; border-color: rgb(34 197 94); color: rgb(34 197 94); }
     </style>
   </head>
   <body class="bg-[var(--bg)] text-white">
@@ -23,7 +29,7 @@
       <div class="nav-blur bg-[#0b0b0bcc]">
         <nav class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div class="flex h-16 items-center justify-between">
-            <a href="#home" class="text-sm font-semibold text-zinc-300 hover:text-white">Home</a>
+            <a href="#hero" class="text-sm font-semibold text-zinc-300 hover:text-white">Home</a>
             <div class="hidden gap-8 md:flex">
               <a href="#hero" class="text-sm text-zinc-300 hover:text-white">About</a>
               <a href="#tabs" class="text-sm text-zinc-300 hover:text-white">Portfolio</a>
@@ -47,13 +53,22 @@
       <div class="max-w-xl lg:max-w-2xl">
         <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">Ednell June Songahid</h1>
         <p class="mt-2 text-lg text-green-400 font-semibold">Aspiring Penetration Tester</p>
-        <p class="mt-6 text-base leading-7 text-zinc-400">I explore systems, document findings, and share writeups. This portfolio blends a clean dark UI with clear, readable content so your work stands out.</p>
+        <p class="mt-6 text-base leading-7 text-zinc-400">
+          Dedicated cybersecurity enthusiast with hands‑on experience in penetration testing labs,
+          network enumeration, and web application security. Passionate about uncovering
+          vulnerabilities, continuous learning, and sharing practical insights through writeups
+          and projects.
+        </p>
         <div class="mt-8 flex items-center gap-4">
-          <a href="#tabs" class="glow inline-flex items-center rounded-lg bg-green-600 px-6 py-3 text-sm font-semibold text-black ring-1 ring-inset ring-green-500/40 hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-400">Let’s get started
+          <a href="#projects"
+             title="Jump to projects" aria-label="View projects"
+             class="glow inline-flex items-center rounded-lg bg-green-600 px-6 py-3 text-sm font-semibold text-black ring-1 ring-inset ring-green-500/40 hover:brightness-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-green-400">
+            View Projects
             <svg class="ml-2 h-4 w-4" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l5 5a1 1 0 010 1.414l-5 5a1 1 0 11-1.414-1.414L13.586 11H4a1 1 0 110-2h9.586l-3.293-3.293a1 1 0 010-1.414z" clip-rule="evenodd"/></svg>
           </a>
-          <a href="#projects" class="inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium text-zinc-300 hover:text-white">View projects</a>
         </div>
+
+        <!-- Logos -->
         <section class="mt-14">
           <p class="text-sm font-medium text-zinc-400">Worked with</p>
           <div class="mt-4 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5">
@@ -65,6 +80,8 @@
           </div>
         </section>
       </div>
+
+      <!-- Portrait -->
       <div class="mt-16 w-full shrink-0 lg:mt-0 lg:w-auto">
         <div class="mx-auto flex aspect-square w-72 items-center justify-center overflow-hidden rounded-full bg-gradient-to-b from-zinc-800 to-zinc-900 ring-1 ring-white/10 sm:w-80 lg:w-[26rem]">
           <img src="profile.jpg" alt="Portrait of Ednell June Songahid" class="h-full w-full object-cover" />
@@ -96,151 +113,35 @@
               </tr>
             </thead>
             <tbody class="divide-y divide-white/10">
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Penetration Testing Process</td>
-                <td class="px-4 py-2 text-green-400">Completed</td>
-                <td class="px-4 py-2">March 2025</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Penetration Getting Started</td>
-                <td class="px-4 py-2 text-green-400">Completed</td>
-                <td class="px-4 py-2">May 2025</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Network Enumeration with Nmap</td>
-                <td class="px-4 py-2 text-green-400">Completed</td>
-                <td class="px-4 py-2">June 2025</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Footprinting</td>
-                <td class="px-4 py-2 text-yellow-300">On Progress</td>
-                <td class="px-4 py-2">July 2025</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Information Gathering - Web Edition</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Vulnerability Assessment</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: File Transfers</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Penetration Shells & Payloads</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Using the Metasploit Framework</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Password Attacks</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Attacking Common Services</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Pivoting, Tunneling, and Port Forwarding</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Active Directory Enumeration & Attacks</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Using Web Proxies</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Attacking Web Applications with Ffuf</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Login Brute Forcing</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: SQL Injection Fundamentals</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: SQLMap Essentials</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Cross-Site Scripting (XSS)</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: File Inclusion</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: File Upload Attacks</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Command Injections</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Web Attacks</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Attacking Common Applications</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Linux Privilege Escalation</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Windows Privilege Escalation</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Documentation & Reporting</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">HTB Academy: Attacking Enterprise Networks</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
-              <tr class="hover:bg-white/5">
-                <td class="px-4 py-2">PenTest+ (Plus) Certification</td>
-                <td class="px-4 py-2 text-zinc-300">Planned</td>
-                <td class="px-4 py-2">-</td>
-              </tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Penetration Testing Process</td><td class="px-4 py-2 text-green-400">Completed</td><td class="px-4 py-2">March 2025</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Penetration Getting Started</td><td class="px-4 py-2 text-green-400">Completed</td><td class="px-4 py-2">May 2025</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Network Enumeration with Nmap</td><td class="px-4 py-2 text-green-400">Completed</td><td class="px-4 py-2">June 2025</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Footprinting</td><td class="px-4 py-2 text-yellow-300">On Progress</td><td class="px-4 py-2">July 2025</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Information Gathering - Web Edition</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Vulnerability Assessment</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: File Transfers</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Penetration Shells & Payloads</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Using the Metasploit Framework</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Password Attacks</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Attacking Common Services</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Pivoting, Tunneling, and Port Forwarding</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Active Directory Enumeration & Attacks</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Using Web Proxies</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Attacking Web Applications with Ffuf</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Login Brute Forcing</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: SQL Injection Fundamentals</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: SQLMap Essentials</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Cross-Site Scripting (XSS)</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: File Inclusion</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: File Upload Attacks</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Command Injections</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Web Attacks</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Attacking Common Applications</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Linux Privilege Escalation</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Windows Privilege Escalation</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Documentation & Reporting</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">HTB Academy: Attacking Enterprise Networks</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
+              <tr class="hover:bg-white/5"><td class="px-4 py-2">PenTest+ (Plus) Certification</td><td class="px-4 py-2 text-zinc-300">Planned</td><td class="px-4 py-2">-</td></tr>
             </tbody>
           </table>
         </div>
@@ -284,29 +185,52 @@
       <div id="blog" class="tab-content hidden text-zinc-300">Coming soon.</div>
 
       <!-- Projects -->
-      <div id="projects" class="tab-content hidden">
-        <div class="bg-white/5 border border-white/10 rounded-lg p-6 mb-6">
-          <h3 class="text-xl font-semibold text-green-400"><b>Financial Tracker Web Application</b></h3>
-          <p class="text-sm text-zinc-400 mb-2">Organization: Personal Project</p>
-          <ul class="list-disc list-inside mb-4 text-zinc-200 space-y-1">
-            <li>Developed a financial tracker for easy financial tracking and budgeting.</li>
-            <li>Implemented secure user login with Firebase Auth using Google account.</li>
-            <li><b>Tech Stack:</b> Vite.js, Tailwind CSS, Firebase, HTML</li>
-            <li><b>Security & Authentication:</b> Google</li>
-            <li><b>Screenshots Link:</b> <a href="https://shorturl.at/6HOcZ" class="text-green-400 underline">Financial Tracker</a></li>
-          </ul>
-        </div>
-        <div class="bg-white/5 border border-white/10 rounded-lg p-6 mb-6">
-          <h3 class="text-xl font-semibold text-green-400"><b><a href="https://ce.org.au/">Connect Eurobodalla</a></b></h3>
-          <p class="text-sm text-zinc-400 mb-2">Organization: Capstone Project</p>
-          <ul class="list-disc list-inside mb-4 text-zinc-200 space-y-1">
-            <li>Developed a responsive front-end interface and implemented secure Firebase authentication for a local council dashboard project.</li>
-            <li>Implemented secure user login with Firebase Auth and structured role-based access. Collaborated using GitHub and documented the full deployment pipeline.</li>
-            <li><b>Tech Stack:</b> ReactJs, Tailwind CSS, Firebase, HTML</li>
-            <li><b>Security & Authentication:</b> Password Validations, Security Question & Email Verification</li>
-            <li><b>Documentation Link:</b> <a href="https://shorturl.at/vIDds" class="text-green-400 underline">Connect Eurobodalla</a></li>
-          </ul>
-        </div>
+      <div id="projects" class="tab-content hidden space-y-8 scroll-mt-24">
+        <!-- Project Card 1 -->
+        <article class="grid gap-6 lg:grid-cols-12 bg-white/5 border border-white/10 rounded-2xl p-6">
+          <figure class="lg:col-span-5">
+            <div class="aspect-video w-full overflow-hidden rounded-xl ring-1 ring-white/10 bg-zinc-900">
+              <img src="projects/financial-tracker.png" alt="Financial Tracker screenshots" class="h-full w-full object-cover" />
+            </div>
+            <figcaption class="sr-only">Financial Tracker Web Application UI</figcaption>
+          </figure>
+          <div class="lg:col-span-7">
+            <h3 class="text-2xl font-semibold text-white">Financial Tracker Web Application</h3>
+            <p class="text-sm text-zinc-400 mb-3">Organization: Personal Project</p>
+            <p class="text-zinc-200 mb-4">
+              A friendly budgeting tool that tracks income and expenses with clear summaries and authentication.
+            </p>
+            <ul class="list-disc list-inside text-zinc-200 space-y-1 mb-4">
+              <li>Secure sign‑in with Firebase Auth (Google)</li>
+              <li><b>Tech Stack:</b> Vite.js, Tailwind CSS, Firebase, HTML</li>
+              <li><b>Screenshots:</b> <a href="https://shorturl.at/6HOcZ" class="text-green-400 underline">View album</a></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- Project Card 2 -->
+        <article class="grid gap-6 lg:grid-cols-12 bg-white/5 border border-white/10 rounded-2xl p-6">
+          <figure class="lg:col-span-5 order-last lg:order-first">
+            <div class="aspect-video w-full overflow-hidden rounded-xl ring-1 ring-white/10 bg-zinc-900">
+              <img src="projects/connect-eurobodalla.png" alt="Connect Eurobodalla dashboard screenshots" class="h-full w-full object-cover" />
+            </div>
+            <figcaption class="sr-only">Connect Eurobodalla dashboard</figcaption>
+          </figure>
+          <div class="lg:col-span-7">
+            <h3 class="text-2xl font-semibold text-white">
+              <a href="https://ce.org.au/" class="hover:underline">Connect Eurobodalla</a>
+            </h3>
+            <p class="text-sm text-zinc-400 mb-3">Organization: Capstone Project</p>
+            <p class="text-zinc-200 mb-4">
+              Responsive admin dashboard with secure authentication and role‑based access for a local council initiative.
+            </p>
+            <ul class="list-disc list-inside text-zinc-200 space-y-1 mb-4">
+              <li>Role‑based access and verification flows</li>
+              <li><b>Tech Stack:</b> React, Tailwind CSS, Firebase, HTML</li>
+              <li><b>Docs:</b> <a href="https://shorturl.at/vIDds" class="text-green-400 underline">Project documentation</a></li>
+            </ul>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -322,10 +246,10 @@
     </footer>
 
     <script>
-      // Initialize year
+      // Year
       document.getElementById('year').textContent = new Date().getFullYear();
 
-      // Tabs logic
+      // Tabs
       const tabButtons = document.querySelectorAll('.tab-button');
       const tabContents = document.querySelectorAll('.tab-content');
 
@@ -336,12 +260,14 @@
         element.classList.add('tab-active');
       }
 
-      function toggleVisibility(id) { document.getElementById(id).classList.toggle('hidden'); }
+      function toggleVisibility(id) {
+        document.getElementById(id).classList.toggle('hidden');
+      }
 
-      // Auto select first tab on load if none visible
+      // Default to first tab
       window.addEventListener('DOMContentLoaded', () => {
         const firstBtn = document.querySelector('.tab-button');
-        if (firstBtn) { const firstId = 'certificates'; showTab(firstId, firstBtn); }
+        if (firstBtn) showTab('certificates', firstBtn);
       });
     </script>
   </body>
